@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhanamari's Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- For Icons -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#profile" class="nav-link">Profile</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a data enthusiast with a deep interest in solving complex problems through data-driven insights. My technical expertise lies in Power BI, Excel, Python, SQL, HTML, and CSS. I aim to work in a data analytics role to help businesses make informed decisions based on data.</p>
+
+            <h3>Education</h3>
+            <ul>
+                <li><strong>BSc Computer Science</strong> - Sri C.V Raman College of Arts and Science affilated to bharathiar university (83%) (2022-2025)</li>
+                <li><strong>12th Standard</strong> - Carewell Matrics Higher Secondary School (94%)</li>
+                <li><strong>10th Standard</strong> - Carewell Matrics Higher Secondary School (79%)</li>
+            </ul>
+
+            <h3>Skills</h3>
+            <div class="skills-list">
+                <div class="skill">Power BI</div>
+                <div class="skill">Excel</div>
+                <div class="skill">Python</div>
+                <div class="skill">SQL</div>
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">JavaScript</div>
+            </div>
+
+            <h3>Projects</h3>
+            <div class="project-card">
+                <h4>HR Data Analysis in Power BI</h4>
+                <p>This project involves using Power BI to analyze HR data, focusing on key metrics like employee performance, turnover, and engagement. The dashboard visualizes data to provide actionable insights.</p>
+                <a href="https://github.com/santhanamari2005" class="btn" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h3>Contact</h3>
+            <ul>
+                <li>Email: <a href="mailto:santhiya20050105@gmail.com">santhiya20050105@gmail.com</a></li>
+                <li>Phone: 8523955892</li>
+                <li>GitHub: <a href="https://github.com/santhanamari2005" target="_blank">github.com/santhanamari2005</a></li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="mailto:santhiya20050105@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/8523955892" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/santhanamari2005" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/santhanamari-m-8572a0322/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky Navigation Bar
+        window.onscroll = function () { stickyNav() };
+
+        var navbar = document.querySelector('nav');
+        var sticky = navbar.offsetTop;
+
+        function stickyNav() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        // Active link highlight on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

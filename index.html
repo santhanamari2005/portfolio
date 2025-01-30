@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhanamari's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- For Icons -->
+</head>
+<body>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <header>
+                <h1>Santhanamari.M</h1>
+                <p class="tagline">Aspiring Data Analyst | Final-Year BSc Computer Science Student</p>
+            </header>
+            <div class="intro">
+                <p>Hello! I'm Santhanamari, a passionate data analyst with expertise in data analysis, visualization, and web development. I am proficient in Power BI, Python, SQL, Excel, and web technologies like HTML and CSS.</p>
+                <p>Click below to view my full profile!</p>
+                <!-- Button to visit profile.html -->
+                <a href="profile.html" class="btn">Visit My Profile</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky Navigation Bar
+        window.onscroll = function () { stickyNav() };
+
+        var navbar = document.querySelector('nav');
+        var sticky = navbar.offsetTop;
+
+        function stickyNav() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

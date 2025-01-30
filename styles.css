@@ -1,0 +1,213 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500;
+}
+
+
+/* Home Section */
+#home {
+    background: #044bad;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#home .tagline {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#home .intro {
+    margin-top: 20px;
+}
+
+#home .intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#home .btn {
+    background-color: #fff;
+    color: #4c90af;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+#home .btn:hover {
+    background-color: #386e8e;
+    color: white;
+}
+
+/* Ensure the button is positioned below the text with enough space */
+#home .intro p:last-of-type {
+    margin-bottom: 30px; /* Adds extra space between the paragraph and button */
+}
+
+/* Profile Section */
+#profile {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#profile h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#profile h3 {
+    font-size: 2rem;
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill {
+    background-color: #f1f1f1;
+    color: #66e76c;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+/* Project Card */
+.project-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(11, 0, 107, 0.1);
+}
+
+.project-card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.project-card .btn {
+    background-color: #FF5722;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+    background-color: #0e9c39;
+    color: white;
+    text-align: center;
+}
+
+#contact h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    font-size: 30px;
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #FF5722;
+}
+
+.social-icon:active {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* For smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sticky Navbar Style */
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.356);
+}
+
+/* Active link highlighting */
+.nav-link.active {
+    color: #FF5722;
+    font-weight: bold;
+}
+
+
